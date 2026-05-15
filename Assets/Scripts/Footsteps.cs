@@ -15,11 +15,14 @@ public class Footsteps : MonoBehaviour
     public EventReference footstepsEvent;
     public EventReference jumpEvent;
     public EventReference landEvent;
-
-    // Usunięto: private Dictionary<string, string> surfaceTags;
+    public EventReference breathingEvent; // <-- DODANE: Referencja do dźwięku sapania
 
     private float lastFootstepTime = 0f;
     private float distToGround;
+
+    // Zmienne do obsługi sapania
+    private float currentRunTimer = 0f;      // <-- DODANE
+    private bool wasRunningLastFrame = false; // <-- DODANE
 
     [SerializeField]
     private bool isGrounded = true;
@@ -29,13 +32,10 @@ public class Footsteps : MonoBehaviour
     void Start()
     {
         distToGround = GetComponent<Collider>().bounds.extents.y;
-        
-        // Usunięto: Inicjalizację słownika.
     }
 
     void Update()
     {
-        // Sprawdza, czy gracz skacze, używając spacji.
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PlayJump();
@@ -47,19 +47,31 @@ public class Footsteps : MonoBehaviour
         HandleFootsteps();
     }
 
-    /// <summary>
-    /// Obsługuje logikę odtwarzania dźwięków kroków.
-    /// </summary>
     private void HandleFootsteps()
     {
-        // Sprawdza, czy gracz się porusza.
         bool isMoving = (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0);
-        // Sprawdza, czy gracz biegnie.
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        bool grounded = IsGrounded();
 
-        if (isMoving && IsGrounded())
+        // LOGIKA SAPANIA (DODANE)
+        bool isCurrentlyRunning = isMoving && isRunning && grounded;
+        if (isCurrentlyRunning)
         {
-            // Ustawia interwał na podstawie tego, czy gracz biegnie.
+            currentRunTimer += Time.fixedDeltaTime;
+        }
+        else
+        {
+            if (wasRunningLastFrame && currentRunTimer >= 3f)
+            {
+                RuntimeManager.PlayOneShotAttached(breathingEvent, gameObject);
+            }
+            currentRunTimer = 0f;
+        }
+        wasRunningLastFrame = isCurrentlyRunning;
+
+        // LOGIKA KROKÓW
+        if (isMoving && grounded)
+        {
             float footstepInterval = isRunning ? 0.25f : 0.5f;
 
             if (Time.time - lastFootstepTime > footstepInterval)
@@ -70,9 +82,6 @@ public class Footsteps : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Odtwarza dźwięk kroków w zależności od powierzchni.
-    /// </summary>
     private void PlayFootsteps()
     {
         RaycastHit hit;
@@ -83,9 +92,6 @@ public class Footsteps : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Odtwarza dźwięk skoku.
-    /// </summary>
     private void PlayJump()
     {
         if (IsGrounded())
@@ -101,9 +107,6 @@ public class Footsteps : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Obsługuje dźwięk lądowania po skoku.
-    /// </summary>
     private void OnCollisionEnter(Collision col)
     {
         if (!isGrounded && isJumping)
@@ -112,9 +115,6 @@ public class Footsteps : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Odtwarza dźwięk lądowania.
-    /// </summary>
     private void PlayLanding()
     {
         RaycastHit hit;
@@ -127,27 +127,18 @@ public class Footsteps : MonoBehaviour
         isJumping = false;
     }
 
-    /// <summary>
-    /// Ogólna metoda do odtwarzania dźwięku na podstawie tagu powierzchni.
-    /// ZASTĘPUJE SŁOWNIK instrukcją SWITCH.
-    /// </summary>
-    /// <param name="soundInstance">Instancja dźwięku FMOD.</param>
-    /// <param name="eventRef">Referencja do zdarzenia FMOD.</param>
-    /// <param name="surfaceTag">Tag powierzchni, na której znajduje się gracz.</param>
     private void PlaySurfaceSound(FMOD.Studio.EventInstance soundInstance, EventReference eventRef, string surfaceTag)
     {
-        // Zmienna przechowująca parametr FMOD. Domyślnie ustawiona na null/pusty string.
-        string surfaceParameter = null; 
+        string surfaceParameter = null;
 
-        // Instrukcja SWITCH do mapowania Tagu na Parametr FMOD.
         switch (surfaceTag)
         {
             case "Stone":
             case "Inside_stone":
-            case "Outside": // "Outside" również używa parametru "Stone"
+            case "Outside":
                 surfaceParameter = "Stone";
                 break;
-            
+
             case "Wood":
             case "Inside_wood":
                 surfaceParameter = "Wood";
@@ -158,23 +149,18 @@ public class Footsteps : MonoBehaviour
                 break;
         }
 
-        // Jeśli znaleziono pasujący parametr, odtwórz dźwięk.
         if (surfaceParameter != null)
         {
             soundInstance = RuntimeManager.CreateInstance(eventRef);
             soundInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject.transform));
-            // Ustawia parametr FMOD na podstawie ustalonej wartości.
-            soundInstance.setParameterByNameWithLabel("Footsteps_surface", surfaceParameter); 
+            soundInstance.setParameterByNameWithLabel("Footsteps_surface", surfaceParameter);
             soundInstance.start();
             soundInstance.release();
         }
     }
 
-    /// <summary>
-    /// Sprawdza, czy gracz znajduje się na podłożu.
-    /// </summary>
     bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, distToGround + 0.5f);
-    }  
+    }
 }

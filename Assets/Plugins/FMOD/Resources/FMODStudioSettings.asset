@@ -526,8 +526,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Fmod Tavern/fmod tavern.fspro
-  sourceBankPath: Fmod Tavern/Build
+  sourceProjectPath: ../../../Downloads/Fmod Tavern/fmod tavern.fspro
+  sourceBankPath: ../../../Downloads/Fmod Tavern/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
@@ -564,7 +564,7 @@ MonoBehaviour:
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131859
-  HideSetupWizard: 0
+  HideSetupWizard: 1
   LastEventReferenceScanVersion: 131617
   Platforms:
   - {fileID: -7113343091406021913}

@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: 1644987316
     Data4: 201537474
   Banks:
-  - {fileID: 6170512354390828745}
+  - {fileID: -4621895095236654726}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -47,7 +47,7 @@ MonoBehaviour:
     Data3: -1429711211
     Data4: 272381695
   Banks:
-  - {fileID: 6170512354390828745}
+  - {fileID: -4621895095236654726}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -55,6 +55,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 97000
+--- !u!114 &-6702076094509922794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/footsteps/Surface
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Surface
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1005507398
+    data2: 2152531949
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Wood
+  - Stone
+  - Chandelier
+  - Stairs
+  Exists: 1
 --- !u!114 &-5025265107469003128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +102,7 @@ MonoBehaviour:
     Data3: -100748390
     Data4: 470341382
   Banks:
-  - {fileID: 6170512354390828745}
+  - {fileID: -4621895095236654726}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -82,7 +110,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 835
---- !u!114 &-4649509666711987691
+--- !u!114 &-4621895095236654726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,24 +119,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/footsteps/stairs_footsteps
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/footsteps/stairs_footsteps
-  Guid:
-    Data1: 1906328458
-    Data2: 1333355990
-    Data3: 285595573
-    Data4: -88262238
-  Banks:
-  - {fileID: 6170512354390828745}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 184
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../../../Downloads/Fmod Tavern/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639144590850660816
+  FileSizes:
+  - Name: Desktop
+    Value: 4453312
+  Exists: 1
 --- !u!114 &-4050864973828918880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +149,7 @@ MonoBehaviour:
     Data3: 1717383354
     Data4: 228634067
   Banks:
-  - {fileID: 6170512354390828745}
+  - {fileID: -4621895095236654726}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -137,6 +158,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 708
+--- !u!114 &-3583336630384022272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/heavy_breathing
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/heavy_breathing
+  Guid:
+    Data1: -1551488261
+    Data2: 1312527199
+    Data3: -601043283
+    Data4: 21636065
+  Banks:
+  - {fileID: -4621895095236654726}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8150
 --- !u!114 &-3245225263819693172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +204,7 @@ MonoBehaviour:
     Data3: -592768090
     Data4: 46649389
   Banks:
-  - {fileID: 6170512354390828745}
+  - {fileID: -4621895095236654726}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -179,7 +227,7 @@ MonoBehaviour:
   Name: Surface
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 1005507398
@@ -190,6 +238,7 @@ MonoBehaviour:
   - Wood
   - Stone
   - Chandelier
+  - Stairs
   Exists: 1
 --- !u!114 &-1863344847557404881
 MonoBehaviour:
@@ -210,7 +259,7 @@ MonoBehaviour:
     Data3: -1470536522
     Data4: 675460303
   Banks:
-  - {fileID: 6170512354390828745}
+  - {fileID: -4621895095236654726}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -218,7 +267,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1143
---- !u!114 &-189725019673711700
+--- !u!114 &-468158706671459854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,20 +277,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/footsteps/wood_footsteps1
+  m_Name: event:/footsteps/footsteps
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/footsteps/wood_footsteps1
+  Path: event:/footsteps/footsteps
   Guid:
     Data1: -1281435773
     Data2: 1117997731
     Data3: 1733597594
     Data4: 633307859
   Banks:
-  - {fileID: 6170512354390828745}
+  - {fileID: -4621895095236654726}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -6702076094509922794}
   MinDistance: 1
   MaxDistance: 20
   Length: 320
@@ -258,8 +308,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
   EditorBanks:
-  - {fileID: 7215832815227580260}
-  - {fileID: 6170512354390828745}
+  - {fileID: 7861528417261890855}
+  - {fileID: -4621895095236654726}
   EditorEvents:
   - {fileID: 4690890508760754370}
   - {fileID: -5025265107469003128}
@@ -267,18 +317,17 @@ MonoBehaviour:
   - {fileID: 1052299119610890936}
   - {fileID: -8257668756823814575}
   - {fileID: -3245225263819693172}
-  - {fileID: -189725019673711700}
-  - {fileID: -4649509666711987691}
-  - {fileID: 2358683651244171277}
   - {fileID: -4050864973828918880}
   - {fileID: -7059104942648264161}
+  - {fileID: -468158706671459854}
+  - {fileID: -3583336630384022272}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 6170512354390828745}
+  - {fileID: -4621895095236654726}
   StringsBanks:
-  - {fileID: 7215832815227580260}
+  - {fileID: 7861528417261890855}
   cacheVersion: 131859
-  cacheTime: 639138539441625823
+  cacheTime: 639144590850676238
   SerializableEventsDict:
   - key: event:/ambient/ambient_outside
     index: 0
@@ -292,16 +341,14 @@ MonoBehaviour:
     index: 4
   - key: event:/ambient/ambient_tavern
     index: 5
-  - key: event:/footsteps/wood_footsteps1
-    index: 6
-  - key: event:/footsteps/stairs_footsteps
-    index: 7
-  - key: event:/footsteps/stone_footsteps
-    index: 8
   - key: event:/jump and landing/player_landing
-    index: 9
+    index: 6
   - key: event:/ambient/ambient_fireplace
-    index: 10
+    index: 7
+  - key: event:/footsteps/footsteps
+    index: 8
+  - key: event:/heavy_breathing
+    index: 9
 --- !u!114 &1052299119610890936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,7 +368,7 @@ MonoBehaviour:
     Data3: 1306484879
     Data4: -1671037595
   Banks:
-  - {fileID: 6170512354390828745}
+  - {fileID: -4621895095236654726}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -329,33 +376,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 97000
---- !u!114 &2358683651244171277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/footsteps/stone_footsteps
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/footsteps/stone_footsteps
-  Guid:
-    Data1: 422544285
-    Data2: 1162384349
-    Data3: -1133713498
-    Data4: -1346745378
-  Banks:
-  - {fileID: 6170512354390828745}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 189
 --- !u!114 &2751478676213751949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +391,7 @@ MonoBehaviour:
   Name: Surface
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 3
   Default: 0
   ID:
     data1: 1005507398
@@ -382,6 +402,7 @@ MonoBehaviour:
   - Wood
   - Stone
   - Chandelier
+  - Stairs
   Exists: 1
 --- !u!114 &4690890508760754370
 MonoBehaviour:
@@ -402,7 +423,7 @@ MonoBehaviour:
     Data3: 1365325985
     Data4: 1138020026
   Banks:
-  - {fileID: 6170512354390828745}
+  - {fileID: -4621895095236654726}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -410,27 +431,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 72194
---- !u!114 &6170512354390828745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Fmod Tavern/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639138539441615950
-  FileSizes:
-  - Name: Desktop
-    Value: 4362976
-  Exists: 1
---- !u!114 &7215832815227580260
+--- !u!114 &7861528417261890855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,11 +443,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Fmod Tavern/Build/Desktop/Master.strings.bank
+  Path: ../../../Downloads/Fmod Tavern/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639138539441625823
+  lastModified: 639144590850676238
   FileSizes:
   - Name: Desktop
-    Value: 1350
+    Value: 1276
   Exists: 1

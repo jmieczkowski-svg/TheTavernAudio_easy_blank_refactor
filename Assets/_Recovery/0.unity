@@ -278,8 +278,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 4.13
-  OverrideMaxDistance: 18.25
+  OverrideMinDistance: 2.91
+  OverrideMaxDistance: 15.95
 --- !u!4 &68436453
 Transform:
   m_ObjectHideFlags: 0
@@ -645,10 +645,6 @@ PrefabInstance:
     - target: {fileID: 1115243158249834, guid: cb181bc6c302bca40929333077286a04, type: 3}
       propertyPath: m_Name
       value: Tavern
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688124427241254, guid: cb181bc6c302bca40929333077286a04, type: 3}
-      propertyPath: m_TagString
-      value: Chandelier
       objectReference: {fileID: 0}
     - target: {fileID: 4369231821530882, guid: cb181bc6c302bca40929333077286a04, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1552,7 +1548,7 @@ GameObject:
   - component: {fileID: 431090424}
   m_Layer: 6
   m_Name: Wood
-  m_TagString: Wood
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2370,7 +2366,7 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 4.35
+  OverrideMinDistance: 3.8
   OverrideMaxDistance: 21.5
 --- !u!4 &583210879
 Transform:
@@ -2402,7 +2398,6 @@ GameObject:
   - component: {fileID: 613997993}
   - component: {fileID: 613997990}
   - component: {fileID: 613997989}
-  - component: {fileID: 613997994}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2578,48 +2573,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &613997994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613997984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5662db7a78ed10944a62b27bb1056215, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Footsteps
-  footstepsEvent:
-    Guid:
-      Data1: -1281435773
-      Data2: 1117997731
-      Data3: 1733597594
-      Data4: 633307859
-    Path: event:/footsteps/footsteps
-  jumpEvent:
-    Guid:
-      Data1: 2146806396
-      Data2: 1207909609
-      Data3: 1644987316
-      Data4: 201537474
-    Path: event:/jump and landing/player_jump
-  landEvent:
-    Guid:
-      Data1: -503481936
-      Data2: 1249040224
-      Data3: 1717383354
-      Data4: 228634067
-    Path: event:/jump and landing/player_landing
-  breathingEvent:
-    Guid:
-      Data1: -1551488261
-      Data2: 1312527199
-      Data3: -601043283
-      Data4: 21636065
-    Path: event:/heavy_breathing
-  isGrounded: 1
-  isJumping: 0
 --- !u!1 &688602384
 GameObject:
   m_ObjectHideFlags: 0
@@ -3858,8 +3811,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 3.1
-  OverrideMaxDistance: 14.73
+  OverrideMinDistance: 2.33
+  OverrideMaxDistance: 13.47
 --- !u!4 &1149806350
 Transform:
   m_ObjectHideFlags: 0
@@ -7054,7 +7007,7 @@ Transform:
   m_GameObject: {fileID: 2029459897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 400.41, y: 6.22902, z: 294.48}
+  m_LocalPosition: {x: 400.41, y: 6.22902, z: 296.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7248,7 +7201,7 @@ GameObject:
   - component: {fileID: 2131066730}
   m_Layer: 7
   m_Name: Stone
-  m_TagString: Stone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
