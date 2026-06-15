@@ -28,6 +28,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 507
+--- !u!114 &-7993127572502369335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Outside
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Outside
+  Guid:
+    Data1: 727043642
+    Data2: 1319921903
+    Data3: -2002082898
+    Data4: 400204029
+  Banks:
+  - {fileID: 3368920437964046406}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-7825449530519747405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,33 +82,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 97000
---- !u!114 &-7127589162264248239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/NearFireplace
-  m_EditorClassIdentifier: 
-  Path: snapshot:/NearFireplace
-  Guid:
-    Data1: -1683349690
-    Data2: 1320734302
-    Data3: 1161892488
-    Data4: -524310549
-  Banks:
-  - {fileID: 3368920437964046406}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &-7059104942648264161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,33 +402,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 97000
---- !u!114 &-2768162536043870866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/InsideTavern
-  m_EditorClassIdentifier: 
-  Path: snapshot:/InsideTavern
-  Guid:
-    Data1: 621186312
-    Data2: 1317181994
-    Data3: 501100947
-    Data4: 1643839195
-  Banks:
-  - {fileID: 3368920437964046406}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &-2377941762799701256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,16 +566,14 @@ MonoBehaviour:
   - {fileID: 1930615292161099529}
   - {fileID: 3493502813112186112}
   - {fileID: -7825449530519747405}
-  - {fileID: -2768162536043870866}
-  - {fileID: -7127589162264248239}
-  - {fileID: 5409139333923546159}
+  - {fileID: -7993127572502369335}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3368920437964046406}
   StringsBanks:
   - {fileID: 2239800518799649532}
   cacheVersion: 131859
-  cacheTime: 639171272618985347
+  cacheTime: 639171300089423253
   SerializableEventsDict:
   - key: event:/ambient/ambient_outside
     index: 0
@@ -626,12 +597,8 @@ MonoBehaviour:
     index: 9
   - key: event:/ambient/ambient_fireplace
     index: 10
-  - key: snapshot:/InsideTavern
+  - key: snapshot:/Outside
     index: 11
-  - key: snapshot:/NearFireplace
-    index: 12
-  - key: snapshot:/OutsideYard
-    index: 13
 --- !u!114 &415342299875316083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,10 +722,10 @@ MonoBehaviour:
   Path: Fmod Tavern/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639171272618985347
+  lastModified: 639171300089423253
   FileSizes:
   - Name: Desktop
-    Value: 1848
+    Value: 1746
   Exists: 1
 --- !u!114 &2751478676213751949
 MonoBehaviour:
@@ -803,10 +770,10 @@ MonoBehaviour:
   Path: Fmod Tavern/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639171272618974947
+  lastModified: 639171300089408209
   FileSizes:
   - Name: Desktop
-    Value: 4367232
+    Value: 4364704
   Exists: 1
 --- !u!114 &3493502813112186112
 MonoBehaviour:
@@ -863,33 +830,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 72194
---- !u!114 &5409139333923546159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/OutsideYard
-  m_EditorClassIdentifier: 
-  Path: snapshot:/OutsideYard
-  Guid:
-    Data1: -943221177
-    Data2: 1281068078
-    Data3: 1041743025
-    Data4: 1938796549
-  Banks:
-  - {fileID: 3368920437964046406}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &6052577373755377870
 MonoBehaviour:
   m_ObjectHideFlags: 0
