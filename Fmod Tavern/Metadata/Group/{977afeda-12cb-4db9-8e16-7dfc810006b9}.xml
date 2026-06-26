@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Fireplace</value>
 		</property>
+		<relationship name="masters">
+			<destination>{e8a786b9-0751-4345-b5eb-8d7bc05ba949}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{7ced3003-334b-4a03-b0fb-a2522f2496fb}</destination>
 		</relationship>
